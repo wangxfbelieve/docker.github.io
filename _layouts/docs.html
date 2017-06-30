@@ -99,6 +99,10 @@ else %}{% assign edit_url = "" %}{% endif %} {% break %} {% endif %} {% endfor %
 							{% endfor %}
 							{% if keywordlist.size > 0 %}<span class="glyphicon glyphicon-tags" style="padding-right: 10px"></span><span style="vertical-align: 2px">{{ keywordlist }}</span>{% endif %}
 							{% endunless %}
+							<!-- Suggested topics -->
+							<div id="side-toc-title">You Might Also Like:</div>
+							<div id="dsc-recommended-content"></div>
+							<script src="http://success-dev.docker.com/client/script.js" ></script>
 							<!-- link corrections -->
               <script language="JavaScript">
 							var x = document.links.length;
