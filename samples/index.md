@@ -35,6 +35,10 @@ and help you use of some of the most popular software that has been
 {% for thisPage in site.pages %}{% if thisPage.url contains "/samples/" and thisPage.url != "/samples/" %}| [{{ thisPage.title }}]({{ thisPage.url }}) | {% capture shortxt %}{% include_relative library/{{ thisPage.repo }}/README-short.txt %}{% endcapture %}{{ shortxt | strip }} |
 {% endif %}{% endfor %}
 
+{% for library in site.collections.samples %}
+{{ library }}
+{% endfor %}
+
 ## Sample applications
 
 Run popular software using Docker.
