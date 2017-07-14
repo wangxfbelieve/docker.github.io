@@ -120,6 +120,14 @@ The following ports must be available. On some systems, these ports are open by 
 If you are planning on creating an overlay network with encryption (`--opt encrypted`),
 you will also need to ensure **ip protocol 50** (**ESP**) traffic is allowed.
 
+### Add iptable rules on every hosts, physical machines, virtual machines and so on.
+
+* iptables -A INPUT -p tcp --dport 2377 -j ACCEPT
+* iptables -A INPUT -p tcp --dport 7946 -j ACCEPT
+* iptables -A INPUT -p udp --dport 7946 -j ACCEPT
+* iptables -A INPUT -p tcp --dport 4789 -j ACCEPT
+* iptables -A INPUT -p udp --dport 4789 -j ACCEPT
+
 ## What's next?
 
 After you have set up your environment, you are ready to [create a swarm](create-swarm.md).
